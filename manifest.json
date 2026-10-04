@@ -1,0 +1,31 @@
+{
+  "schemaVersion": 1,
+  "id": "xolghadr.screen-off",
+  "name": "Screen off",
+  "version": "1.0.0",
+  "author": "Sadegh Xolghadr",
+  "license": "MIT",
+  "description": "Turn the displays off after idle, before the session locks.",
+  "kinds": [
+    "service"
+  ],
+  "keepLoaded": true,
+  "entryPoints": {
+    "service": "Service.qml"
+  },
+  "settings": {
+    "defaults": {
+      "timeout": 600
+    },
+    "schema": [
+      {
+        "key": "timeout",
+        "type": "int",
+        "min": 0,
+        "default": 600,
+        "label": "Screen off",
+        "description": "Seconds from the start of idle before the displays turn off. 0 disables blanking. The session lock stays on idle.lock."
+      }
+    ]
+  }
+}
