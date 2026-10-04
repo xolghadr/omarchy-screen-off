@@ -2,7 +2,7 @@
 
 Turns the displays off after you go idle, and leaves the session lock to Omarchy.
 
-The default wait is 10 minutes. Stay awake (`Super + Ctrl + I`) holds this and the lock. A key or mouse move turns the displays back on.
+The default wait is 4 minutes (240 seconds). Omarchy's screensaver starts at 2.5 minutes and the lock at 5, so the displays go dark after the screensaver and one minute before the lock. Stay awake (`Super + Ctrl + I`) holds this and the lock. A key or mouse move turns the displays back on.
 
 It runs inside `omarchy-shell`. It does not write `shell.json`, and it installs nothing else.
 
@@ -22,13 +22,13 @@ The wait is `timeout` on this plugin's entry in `~/.config/omarchy/shell.json`, 
   "plugins": [
     {
       "id": "xolghadr.screen-off",
-      "timeout": 600
+      "timeout": 240
     }
   ]
 }
 ```
 
-Set `idle.lock` later than `timeout` if the displays should go dark before the lock. With the default, a lock at 900 seconds is five minutes after the screens turn off.
+Set `idle.lock` later than `timeout` if the displays should go dark before the lock. The stock lock is 300 seconds, one minute after this default.
 
 ```sh
 omarchy-shell screen-off status

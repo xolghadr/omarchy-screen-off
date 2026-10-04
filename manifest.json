@@ -15,14 +15,14 @@
   },
   "settings": {
     "defaults": {
-      "timeout": 600
+      "timeout": 240
     },
     "schema": [
       {
         "key": "timeout",
         "type": "int",
         "min": 0,
-        "default": 600,
+        "default": 240,
         "label": "Screen off",
         "description": "Seconds from the start of idle before the displays turn off. 0 disables blanking. The session lock stays on idle.lock."
       }

@@ -30,7 +30,7 @@ Item {
   function defaultTimeout() {
     var defaults = root.manifest && root.manifest.settings
       ? root.manifest.settings.defaults : null
-    return ScreenOffModel.timeoutSeconds(defaults ? defaults.timeout : undefined, 600)
+    return ScreenOffModel.timeoutSeconds(defaults ? defaults.timeout : undefined, 240)
   }
 
   function logEvent(event) {
